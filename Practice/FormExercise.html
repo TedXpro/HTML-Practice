@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <form method="post" action="">
+            <input name="subject" type="hidden" value="Class"/>
+            <fieldset>
+                <legend>Academic information</legend>
+                <label for="degree">Degree</label>
+                <select name="degree" id="degree">
+                    <option value="BA">Bachelor of Art</option>
+                    <option value="BS">Bachelor of Science</option>
+                    <option value="MBA" selected="selected">Master of Business Adminstration</option>
+                </select>
+                <br/>
+                Gender:
+                <input name="gender" type="radio" id="gm" value="m"/>
+                <label for="gm">Male</label>
+                <input name="gender" type="radio" id="gf" value="f" />
+                <label for="gf">Female</label>
+                <br/>
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email"/>
+            </fieldset>
+            <p>
+                <textarea name="terms" cols="30" rows="4" readonly="readonly">TERMS AND CONDITIONS...</textarea>
+            </p>
+            <p>
+                <input type="submit" name="submit" value="Send Form"/>
+                <input type="reset" value="CleartForm"/>
+            </p>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,1 @@
+This repository holds all practice code done while reading the book `html for dummies`
