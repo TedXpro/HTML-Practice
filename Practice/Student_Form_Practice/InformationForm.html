@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Student Form</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+</head>
+
+<body>
+    <form>
+        <h1>Register Course</h1>
+        <fieldset>
+            <legend>Personal information</legend>
+            <label id="name">Name: <input type="text" required placeholder="Enter Your Full Name" /></label>
+            <label id="age">Age: <input type="number" min="18" max="50" placeholder="20"/></label>
+            <span id="Gender">Gender:</span>
+            <input type="radio" name="Gender" value="M">Male</input>
+            <input type="radio" name="Gender" value="F">Female</input>
+        </fieldset>
+        <fieldset>
+            <legend>Account Details</legend>
+            <label id="email">Email: <input type="email" required placeholder="enterYourEmail@gmail.com" /></label>
+            <label id="password">Password: <input type="password" required placeholder="enter your password" /></label>
+            <span>Select Field</span>
+            <select>
+                <option value="CompSci" selected>Computer Science</option>
+                <option value="ElecEng">Electrical Engineering</option>
+                <option value="MechEng">Mechanical Engineering</option>
+                <option value="Medicine">Medicine</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Comments Section</legend>
+            <label>Have any comments?</label>
+            <textarea placeholder="Please give us any comments..."></textarea>
+        </fieldset>
+        <div class="buttons">
+            <input type="submit" value="Register"/>
+            <input type="reset" value="Reset"/>
+        </div>
+    </form>
+</body>
+
+</html>
