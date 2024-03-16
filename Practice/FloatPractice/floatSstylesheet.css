@@ -1,0 +1,39 @@
+.floated {
+    float: left;
+    width: 50%;
+}
+
+p {
+    border: 2px black solid;
+}
+
+.right {
+    margin-left: 52%;
+}
+
+fieldset {
+    background-color: #AAAAFF;
+}
+
+label {
+    float: left;
+    clear: left;
+    width: 5em;
+    margin-right: .5em;
+    text-align: right;
+}
+
+input {
+    background-color: #CCCCFF;
+    float: left;
+}
+
+button {
+    float: left;
+    clear: both;
+    width: 10em;
+    margin-left: 7em;
+    margin-top: 1em;
+    background-color: #0000CC;
+    color: #FFFFFF;
+}
