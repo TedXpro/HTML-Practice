@@ -1,0 +1,23 @@
+#header {
+    border-bottom: 3px double black;
+    text-align: center;
+}
+
+#left {
+    float: left;
+    width: 20%;
+    text-align:left;
+}
+
+#right {
+    text-align: justify;
+    float: left;
+    width: 75%;
+    border-left: 3px gray double;
+}
+
+#footer {
+    clear: both;
+    border-top: 3px black double;
+    text-align: center;
+}
