@@ -3,6 +3,12 @@
     <head>
         <title>table practice</title>
         <meta charset=" UTF-8">
+        <style>
+            /* #rowHalf{
+                display: flex;
+                height: 100px;
+            } */
+        </style>
     </head>
     <body>
         <table  border="1">
@@ -37,7 +43,7 @@
             <tr>
                 <td> 11:00 a.m</td>
                 <td> 2:00 p.m</td>
-                <td rowspan="2"> XSL Transformation</td>
+                <td id="rowHalf" style="display:flexbox;  "> XSL Transformation</td>
             </tr>
             <tr>
                 <td>2:00 a.m</td>
@@ -47,7 +53,7 @@
                 <td>wednesday</td>
                 <td> 8:00 a.m</td>
                 <td> 12:00 p.m</td>
-                <td>XSL FOrmatting objects</td>
+                <td>XSL Formatting objects</td>
             </tr>
         </table>
     </body>
