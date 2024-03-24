@@ -1,0 +1,17 @@
+h1{
+    background-color: rgb(95, 95, 131);
+    display: flex;
+    margin: 0 0 5px 0;
+    text-align: center;
+
+}
+
+#container{
+    background-color: brown;
+    padding: 5px;
+}
+
+#imageContainer{
+
+    margin: 20px;
+}
