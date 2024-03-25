@@ -4,10 +4,11 @@
         <title>table practice</title>
         <meta charset=" UTF-8">
         <style>
-            /* #rowHalf{
-                display: flex;
-                height: 100px;
-            } */
+            .rowHalf{
+                background-color: red;
+                width: 150%; /* Adjust width as needed for visual effect */
+    vertical-align: middle;
+            }
         </style>
     </head>
     <body>
@@ -37,13 +38,13 @@
                 <td rowspan="3">tuesday</td>
                 <td > 8:00 a.m</td>
                 <td> 11:00 a.m</td>
-                <td >Xpath</td>
+                <td class="rowHalf">Xpath</td>
             </tr>
 
             <tr>
                 <td> 11:00 a.m</td>
                 <td> 2:00 p.m</td>
-                <td id="rowHalf" style="display:flexbox;  "> XSL Transformation</td>
+                <td class="rowHalf"> XSL Transformation</td>
             </tr>
             <tr>
                 <td>2:00 a.m</td>
