@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="registerStyling.css">
+</head>
+
+<body>
+    <h1>Register</h1>
+
+    <form method="post" accept="">
+        <label class="info">Full Name</label>
+        <input class="info" type="text">
+        <label class="info">Phone</label>
+        <input class="info" type="tel">
+        <label class="info">Age</label>
+        <input class="info" type="number" min="20">
+        <label>Your Favorite Color</label>
+        <input type="color" id="colorInput">
+        <label class="info">Birthdate:</label>
+        <input type="date" id="dataInput">
+
+        <label class="info">Gender</label>
+        <label for="gender">Female</label>
+        <input id="female" value="F" name="gender" type="radio">
+        <label for="gender">Male</label>
+        <input id="male" value="M" type="radio" name="gender">
+        <br>
+        <br>
+        <label class="info">Password</label>
+        <input type="text" class="info">
+        <label class="info">Confirm Password</label>
+        <input type="text" class="info">
+
+        <br>
+        <label>Skills</label>
+        <ul>
+            <li><input type="checkbox">HTML</li>
+            <li><input type="checkbox">CSS</li>
+            <li><input type="checkbox">Java Script</li>
+            <li><input type="checkbox">PHP</li>
+        </ul>
+
+        <label class="info">Country</label>
+        <select>
+            <option value=""></option>
+            <option value="et" selected>Ethiopia</option>
+            <option value="us">United States of America</option>
+            <option value="ken">Kenya</option>
+            <option value="rus">Russia</option>
+        </select>
+
+        <label class="info">Photo</label>
+        <input type="file" class="info">
+
+        <label class="info">Describe Your Self</label>
+        <textarea></textarea>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <footer>
+        <br>
+        <hr>
+        <label>Follow us On: </label>
+        <a href="https://facebook.com">Facebook</a>
+        <label>|</label>
+        <a href="https://twitter.com">Twitter</a>
+    </footer>
+</body>
+
+</html>

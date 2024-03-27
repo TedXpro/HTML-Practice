@@ -1,0 +1,37 @@
+label {
+    float: left;
+    clear: left;
+    width: 5em;
+}
+
+input {
+    float: left;
+}
+
+button {
+    float: left;
+    clear: both;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: blueviolet;
+}
+
+a.linkColor:link {
+    color: blue;
+}
+
+.linkPart {
+    float: right;
+    clear: left;
+}
+
+.signInForm {
+    float: right;
+    width: 90%;
+    padding: 2rem;
+}
