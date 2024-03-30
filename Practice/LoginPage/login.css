@@ -35,3 +35,20 @@ a.linkColor:link {
     width: 90%;
     padding: 2rem;
 }
+
+.submit_button:hover {
+    background-color: #DDDDEE;
+    box-shadow: 3px 3px 3px gray;
+}
+
+#submit_button {
+    text-decoration: none;
+    color: black;
+    display: block;
+    background-color: #EEEEFF;
+    box-shadow: 5px 5px 5px gray;
+    margin-bottom: 5px;
+    float: left;
+    clear: both;
+    padding: 3px;
+}
