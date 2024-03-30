@@ -1,0 +1,51 @@
+input {
+    display: block;
+    width: 152px;
+    height: 27px;
+}
+
+select {
+    width: 157px;
+    height: 32px;
+}
+
+label {
+    display: block;
+    padding: .5rem 0;
+}
+
+h3 {
+    padding-bottom: 0;
+}
+
+.middle {
+    float: left;
+    width: 15%;
+}
+
+.left {
+    float: left;
+    width: 15%;
+}
+
+.right {
+    float: left;
+    width: 15%;
+}
+
+.sub_container {
+    margin-bottom: 20px;
+    clear: both;
+}
+
+.label_Class {
+    font-size: medium;
+    padding-top: 10px;
+}
+
+#main_Container {
+    /* width: 800px; */
+    height: 500px;
+    margin: auto;
+    background-color: aliceblue;
+}
