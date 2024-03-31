@@ -1,0 +1,48 @@
+body {
+    background-color: #fff9bf;
+}
+
+h1 {
+    text-align: center;
+}
+
+#menu {
+    position: fixed;
+    width: 18%;
+    float: left;
+}
+
+#menu li {
+    list-style-type: none;
+    margin-left: -2em;
+    text-align: center;
+}
+
+#menu a {
+    display: block;
+    border: 2px gray outset;
+    text-decoration: none;
+    color: black;
+}
+
+#menu a:hover {
+    color: black;
+    background-color: white;
+    border: 2px inset gray;
+}
+
+#menu h2 {
+    text-align: center;
+}
+
+.content {
+    position: relative;
+    left: 300px;
+    top: 0;
+    width: 80%;
+    float: left;
+}
+
+.content h2 {
+    border-top: 3px black double;
+}
