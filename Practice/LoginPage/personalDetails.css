@@ -20,17 +20,17 @@ h3 {
 
 .middle {
     float: left;
-    width: 15%;
+    width: 30%;
 }
 
 .left {
     float: left;
-    width: 15%;
+    width: 30%;
 }
 
 .right {
     float: left;
-    width: 15%;
+    width: 30%;
 }
 
 .sub_container {
@@ -43,9 +43,13 @@ h3 {
     padding-top: 10px;
 }
 
-#main_Container {
-    /* width: 800px; */
-    height: 500px;
-    margin: auto;
-    background-color: aliceblue;
+.main_Container {
+    width: 600px;
+    margin: 5%;
+    padding: 2%;
+    height: 700px;
+}
+
+#addressDetails {
+    padding-top: 45px;
 }

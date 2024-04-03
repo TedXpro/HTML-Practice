@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Form</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="simpleFormStyle.css">
+    <script>
+        function sayHi() {
+            var txtName = document.getElementById("txtName");
+            var txtOutput = document.getElementById("txtOutput");
+
+            var name = txtName.value;
+            txtOutput.value = "Hi there, " + name + "!";
+            txtName.value = txtName.value + " Belay";
+
+            divOutput = document.getElementById("divOutput");
+            divOutput.innerHTML = "<em>" + name + "</em>" + " is a beautiful Name ";
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Text Box input and output</h1>
+    <form action="">
+        <label>Type your Name</label>
+        <input type="text" id="txtName">
+        <input type="button" value="click Me" onclick="sayHi()">
+        <input type="text" id="txtOutput" />
+    </form>
+
+    <div id="divOutput">Watch this space</div>
+</body>
+
+</html>

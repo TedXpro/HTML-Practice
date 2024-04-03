@@ -12,8 +12,8 @@
     <h1>Register</h1>
 
     <form method="post" accept="">
-        <label class="info">Full Name</label>
-        <input class="info" type="text">
+        <label class="info" >Full Name</label>
+        <input class="info" required type="text">
         <label class="info">Phone</label>
         <input class="info" type="tel">
         <label class="info">Age</label>
@@ -21,7 +21,7 @@
         <label>Your Favorite Color</label>
         <input type="color" id="colorInput">
         <label class="info">Birthdate:</label>
-        <input type="date" id="dataInput">
+        <input type="date" id="dataInput" required>
 
         <label class="info">Gender</label>
         <label for="gender">Female</label>
@@ -31,9 +31,9 @@
         <br>
         <br>
         <label class="info">Password</label>
-        <input type="text" class="info">
+        <input type="text" class="info" required>
         <label class="info">Confirm Password</label>
-        <input type="text" class="info">
+        <input type="text" class="info" required>
 
         <br>
         <label>Skills</label>
@@ -45,7 +45,7 @@
         </ul>
 
         <label class="info">Country</label>
-        <select>
+        <select required>
             <option value=""></option>
             <option value="et" selected>Ethiopia</option>
             <option value="us">United States of America</option>

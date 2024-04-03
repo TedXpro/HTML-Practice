@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <div id="main_Container">
+    <div class="main_Container">
         <div class="sub_container">
             <label class="label_Class">Personal Details</label>
             <div class="left">
@@ -57,10 +57,51 @@
                 <input type="text" placeholder="Enter Issued Authority">
                 <label>Expiry Date</label>
                 <input type="date">
+            </div>
+        </div>
 
-                </label>
+        <div class="second_Container">
+            <div class="sub_container">
+                <label class="label_Class" id="addressDetails">Address Details</label>
+                <div class="left">
+                    <label>Address Type</label>
+                    <input type="text" placeholder="Permanent or Temporary">
+                    <label>District</label>
+                    <input type="text" placeholder="Enter your District">
+                </div>
+                <div class="middle">
+                    <label>Nationality</label>
+                    <input type="text" placeholder="Enter Nationality" min="1000">
+                    <label>Block Number</label>
+                    <input type="text" placeholder="Enter Block Number">
+                </div>
+
+                <div class="right">
+                    <label>State</label>
+                    <input type="text" placeholder="Enter your State">
+                    <label>Ward Number</label>
+                    <input type="text" placeholder="Enter Ward Number">
+
+                </div>
             </div>
 
+            <div class="sub_container">
+                <label class="label_Class">Family Details</label>
+                <div class="left">
+                    <label>Father name</label>
+                    <input type="text" placeholder="Enter Father Name">
+                </div>
+                <div class="middle">
+                    <label>Mother name</label>
+                    <input type="text" placeholder="Enter Mother Name">
+                </div>
+
+                <div class="right">
+                    <label>Grandfather Name</label>
+                    <input type="text" placeholder="Enter Grandfather Name">
+                </div>
+
+            </div>
         </div>
     </div>
 </body>
