@@ -1,0 +1,153 @@
+#top_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 70%;
+    padding: 10px;
+    border-bottom: 2px dotted black;
+}
+
+#logo {
+    border: 3px black outset;
+    width: 150px;
+    height: 40px;
+    font-size: 30px;
+    margin-right: 100px;
+    padding: 10px;
+    text-align: center;
+}
+
+#top_menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#top_menu ul li {
+    margin-right: 10px;
+}
+
+#top_menu a {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 5px;
+}
+
+#searchBar {
+    color: black;
+    float: left;
+    margin-right: 10px;
+}
+
+#searchBar label {
+    display: block;
+}
+
+#top_menu input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+#top_menu button[type="submit"] {
+    padding: 5px 10px;
+    background-color: #a2a0a0;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#main_content {
+    position: absolute;
+    top: 20%;
+    width: 42%;
+    float: left;
+}
+
+#left_menu {
+    float: left;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    clear: both;
+    position: fixed;
+    width: 13%;
+    height: 450px;
+    top: 22%;
+    left: 15%;
+    /* padding-top: 20px; */
+    background-color: rgb(190, 188, 188);
+}
+
+#left_menu ul {
+    list-style-type: none;
+    float: left;
+    width: 80%;
+}
+
+#left_menu a {
+    text-decoration: none;
+    /* border: 2px black solid; */
+    background-color: rgb(247, 247, 247);
+    color: black;
+    padding: 25px;
+    width: auto;
+    margin: 10px;
+}
+
+#left_menu li {
+    width: fit-content;
+    margin-top: 40px;
+    margin-bottom: 65px;
+    margin-left: -25px;
+
+    padding: 0;
+}
+
+#right_menu {
+    float: left;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* text-align: cente    r; */
+    /* clear: both; */
+    position: fixed;
+    width: 13%;
+    height: 65%;
+    top: 22%;
+    right: 15%;
+    /* padding-top: 20px; */
+    background-color: rgb(190, 188, 188);
+}
+
+#right_menu ul {
+    list-style-type: none;
+    float: left;
+    width: 80%;
+}
+
+#right_menu a {
+    text-decoration: none;
+    /* border: 2px black solid; */
+    background-color: rgb(247, 247, 247);
+    color: black;
+    padding: 25px;
+    width: auto;
+    margin: 10px;
+}
+
+#right_menu li {
+    width: fit-content;
+    margin-top: 40px;
+    margin-bottom: 65px;
+    margin-left: -25px;
+
+    padding: 0;
+}
+
+main {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
