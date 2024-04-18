@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>If Else Practice</title>
+
+    <script>
+        function checkName() {
+            var name = document.getElementById("txtName");
+            var output = document.getElementById("txtoutput");
+            var n = name.value;
+            if (n == "Yohannes")
+                output.innerHTML = "Thanks for bringing us to life";
+            else
+                output.innerHTML = "Ur not the one that wrote my code";
+        }
+
+        var output;
+        var count;
+        function init() {
+            output = document.getElementById("output");
+            count = 3;
+        }
+
+        function countToTen() {
+            var number = 0;
+            output.innerHTML = "";
+            output.innerHTML += "</br>";
+            while (number <= 10) {
+                output.innerHTML += number + "<br>";
+                number++;
+            }
+        }
+
+        function countBackwards() {
+            var number = 10;
+            output.innerHTML = "";
+            output.innerHTML += "</br>";
+            while (number >= 0) {
+                output.innerHTML += number + "</br>";
+                number--;
+            }
+        }
+
+        function countByFive() {
+            var number = 10;
+            output.innerHTML = "";
+            output.innerHTML += "</br>";
+            while (number <= 50) {
+                output.innerHTML += number + "</br>";
+                number += 5;
+            }
+        }
+
+        function checkPassword() {
+            var found = false;
+            while(!found){
+
+                
+            }
+            
+            if (count <= 0) {
+                passwordOutput.innerHTML += "No more tries remaining!";
+            } else {
+                pwdInput = document.getElementById("pwdInput");
+                count--;
+                if (pwdInput.value == "password")
+                    passwordOutput.innerHTML += "Hurray you have guessed the password right!";
+                else
+                    passwordOutput.innerHTML += count + " chances remaining\n";
+            }
+        }
+    </script>
+</head>
+
+<body onload="init()">
+    <fieldset>
+        <label id="txtoutput">Enter Your Name</label>
+        <input id="txtName" type="text">
+        <button onclick="checkName()">Click Me</button>
+    </fieldset>
+
+    <div>
+        <button type="button" onclick="countToTen()">countToTen</button>
+        <button type="button" onclick="countBackwards()">countBackwards</button>
+        <button type="button" onclick="countByFive()">countByFive</button>
+    </div>
+
+    <div id="output">Click on something to see some counting...</div>
+
+    <form>
+        <fieldset>
+            <label>Password</label>
+            <input type="password" id="pwdInput">
+            <button onclick="checkPassword()">Try</button>
+            
+        </fieldset>
+    </form>
+    <div id="passwordOutput">3 chances remaining</div>
+</body>
+
+</html>
