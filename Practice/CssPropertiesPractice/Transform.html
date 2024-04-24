@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D & 3D Transforms Demo</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            border: 2px solid black;
+            margin: 10px;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        #box1 {
+            transform: rotate(45deg);
+        }
+
+        #box2 {
+            transform: rotateX(60deg);
+            
+        }
+
+        #box3 {
+            transform: rotateY(75deg);
+            
+        }
+
+        #box4 {
+            transform: translate(50px, 30px);
+        }
+
+        #box5 {
+            transform: scale(1.5, 0.8);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="box1">2D Rotate</div>
+        <div class="box" id="box2">3D Rotate X</div>
+        <div class="box" id="box3">3D Rotate Y</div>
+        <div class="box" id="box4">2D Translate</div>
+        <div class="box" id="box5">2D Scale</div>
+    </div>
+</body>
+
+</html>

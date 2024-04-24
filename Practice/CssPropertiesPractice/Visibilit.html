@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility</title>
+    <style>
+        #firstParagraph {
+            border: 3px solid black;
+            visibility: hidden;
+        }
+
+        #secondParagraph {
+            visibility: visible;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 50%;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        .hidden {
+            visibility: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="firstParagraph">LOREM epsum LOREM epsumLOREM epsum LOREM epsumLOREM epsum LOREM epsum LOREM epsum LOREM
+        epsumLOREM epsum LOREM
+        epsumLOREM epsum LOREM epsumLOREM epsum LOREM epsum LOREM epsum LOREM epsumLOREM epsum LOREM epsumLOREM epsum
+        LOREM epsumLOREM epsum LOREM epsum LOREM epsum LOREM epsumLOREM epsum LOREM epsumLOREM epsum LOREM epsumLOREM
+        epsum LOREM epsum LOREM epsum LOREM epsumLOREM epsum LOREM epsumLOREM epsum LOREM epsumLOREM epsum LOREM epsum
+        LOREM epsum LOREM epsumLOREM epsum LOREM epsumLOREM epsum LOREM epsumLOREM epsum LOREM epsum LOREM epsum LOREM
+        epsumLOREM epsum LOREM epsumLOREM epsum LOREM epsumLOREM epsum LOREM epsum LOREM epsum LOREM epsumLOREM epsum
+        LOREM epsumLOREM epsum LOREM epsumLOREM epsum LOREM epsum LOREM epsum LOREM epsumLOREM epsum LOREM epsumLOREM
+        epsum LOREM epsumLOREM epsum LOREM epsum LOREM epsum LOREM epsum</p>
+    <p id="secondParagraph">
+        LOREM epsum LOREM epsumLOREM epsum LOREM epsumLOREM epsum LOREM epsum LOREM epsum LOREM
+        epsumLOREM epsum LOREM epsumLOREM epsum LOREM epsumLOREM epsum LOREM epsum LOREM epsum LOREM epsumLOREM epsum
+        LOREM epsumLOREM epsum LOREM epsumLOREM epsum LOREM epsum LOREM epsum LOREM epsumLOREM epsum LOREM epsumLOREM
+        epsum LOREM epsumLOREM
+        epsum LOREM epsum LOREM epsum LOREM epsumLOREM epsum LOREM epsumLOREM epsum LOREM epsumLOREM epsum LOREM epsum
+        LOREM epsum LOREM epsumLOREM epsum LOREM epsumLOREM epsum LOREM epsumLOREM epsum LOREM epsum LOREM epsum LOREM
+        epsumLOREM epsum LOREM epsumLOREM epsum LOREM epsumLOREM epsum LOREM epsum LOREM epsum LOREM epsumLOREM epsum
+        LOREM epsumLOREM epsum LOREM epsumLOREM epsum LOREM epsum LOREM epsum LOREM epsumLOREM epsum LOREM epsumLOREM
+        epsum LOREM epsumLOREM epsum LOREM epsum LOREM epsum LOREM epsum</p>
+
+    <br>
+    <br>
+    <table>
+        <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+            <th>Header 3</th>
+        </tr>
+        <tr >
+            <td>Data 1</td>
+            <td>Data 2</td>
+            <td>Data 3</td>
+        </tr>
+        <tr>
+            <td>Data 4</td>
+            <td>Data 5</td>
+            <td>Data 6</td>
+        </tr>
+        <tr class="hidden">
+            <td>Data 7</td>
+            <td>Data 8</td>
+            <td>Data 9</td>
+        </tr>
+        <tr>
+            <td>Data 10</td>
+            <td>Data 11</td>
+            <td>Data 12</td>
+        </tr>
+    </table>
+</body>
+
+</html>

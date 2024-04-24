@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Links</title>
+    <style>
+        .Links{
+            /* background-color: gray; */
+            word-spacing: 30px;
+            padding-right: 0;
+            padding-left: 70%;
+            font-size: large;
+            font-style: italic;
+        }
+
+
+        .Links a:nth-child(2):hover{
+            color: red;
+        }
+        .Links a:visited{
+            color: chartreuse;
+        }
+
+        .Links a:not(a:nth-child(2)):hover{
+            color: yellow;
+        }
+
+        .Links a:last-child():checked{
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Links">
+        <a href="https://facebook.com">FaceBook</a>
+        <a id="second" href="https://Youtube.com">Youtube</a>
+        <a href="https://google.com">Google</a>
+        <a href="https://twitter.com">twitter</a>
+    </div>
+</body>
+
+</html>

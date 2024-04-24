@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Properties</title>
+    <style>
+        ol ul{
+            list-style-type: square;
+            list-style-position: inside;
+            list-style-image: url(download\ \(1\).jpg);
+            /* padding-left: 20px; */
+            
+        }
+
+        #firstDiv ul{
+            list-style: disc inside;
+        }
+        ol{
+            list-style: upper-roman;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div id="firstDiv">
+        <h1>Best Programming Courses</h1>
+        <ul>
+            <li>C++</li>
+            <li>Java</li>
+            <li>Python</li>
+            <li>Java Script</li>
+        </ul>
+    </div>
+    <div id="secondDiv">
+        <h1>Languages used for web application development</h1>
+        <ol>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Java Script</li>
+            <li>
+                FrameWorks
+                <ul>
+                    <li>React</li>
+                    <li>Spring Boot</li>
+                    <li>Spring MVC</li>
+                    <li>Node</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+</body>
+</html>
