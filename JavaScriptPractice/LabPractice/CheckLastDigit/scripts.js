@@ -1,4 +1,5 @@
-// 5.	Write a JavaScript program that checks whether the last digit of three positive integers is the same.
+/* 5.	Write a JavaScript program that checks whether the last
+digit of three positive integers is the same. */
 const firstNumber = document.getElementById("firstNumber");
 const secondNumber = document.getElementById("secondNumber");
 const thirdNumber = document.getElementById("thirdNumber");
