@@ -18,17 +18,17 @@ const fibonacci = () => {
     let num = parseFloat(number.value);
     
 
-    const getFibonachi = (num) => {
+    const getFibonacci = (num) => {
         if (num in memo)
             return memo[num];
 
-        let res = getFibonachi(num - 1) + getFibonachi(num - 2);
+        let res = getFibonacci(num - 1) + getFibonacci(num - 2);
         memo[num] = res;
         arr.push(res);
         return res;
     }
 
-    let _result = getFibonachi(num + 1);
+    let _result = getFibonacci(num + 1);
 
     let ans = `The ${num} Fibonachi Numbers are: `;
     arr.forEach((curr, index) => {
