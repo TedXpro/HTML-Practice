@@ -1,0 +1,22 @@
+.info {
+    display: block;
+    width: 500px;
+}
+
+#colorInput {
+    display: block;
+}
+
+#dateInput {
+    display: block;
+}
+
+select {
+    display: block;
+}
+
+textarea {
+    display: block;
+    width: 500px;
+    height: 120px;
+}

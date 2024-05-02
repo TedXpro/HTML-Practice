@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum Tripple Sum</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        label {
+            display: block;
+        }
+
+        .hidden {
+            visibility: hidden;
+        }
+        .answerDisplay{
+            background-color: lightgray;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mainDiv">
+        <label>First Number:</label>
+        <input id="firstNumber" type="number">
+        <label>Second Number:</label>
+        <input id="secondNumber" type="number">
+        <button id="calculate" type="submit">Calculate</button>
+    
+    </div>
+    <label class="hidden" for="answer">Result:</label>
+    <input id="answer" class="hidden answerDisplay" type="number">
+    <div id="errorMessage"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
