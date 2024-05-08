@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Input Types</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- <style>
+      * {
+        font-family: "arial";
+        margin: 5px;
+        padding: 2px;
+      }
+
+      input {
+        border: 1px solid #ccc;
+        padding: 5px;
+      }
+
+      input.error {
+        border: 1px solid red;
+      }
+
+      #print {
+        & table tr:nth-child(odd) {
+          background-color: rgb(233, 233, 233);
+        }
+        & table tr:nth-child(even) {
+          background-color: rgb(255, 255, 255);
+        }
+      }
+    </style> -->
+  <style>
+    #errorMessage {
+      display: none;
+      color: red;
+
+    }
+
+    .error {
+      color: rgb(123, 222, 69);
+    }
+
+    .red-background {
+      background-color: rgba(171, 227, 74, 0.2);
+    }
+
+    .yellow-background {
+      background-color: rgba(255, 255, 0, 0.2);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Register</h1>
+
+  <form action="" method="POST" id="myForm">
+    <label for="fullname">Fullname</label><br />
+    <input required type="text" id="fullname" name="fullname" onfocus="clearError('fullname')"
+      onblur="validateName('fullname')" /><br />
+
+    <label for="phone">Phone</label><br />
+    <input type="tel" name="phone" id="phone" required pattern="[0-9]{10}" onfocus="$(this).addClass('red-background')"
+      onblur="$(this).removeClass('red-background').addClass('yellow-background')"
+      onchange="$(this).removeClass('red-background yellow-background')" /><br />
+
+    <label for="age">Age</label><br />
+    <input type="number" id="age" name="age" min="18" max="120" onfocus="clearError('age')"
+      onblur="validateAge('age')" /><br />
+
+    <label for="bdate">Birthdate</label><br />
+    <input required type="date" id="bdate" name="birthdate" onfocus="clearError('bdate')"
+      onblur="validateBirthdate('bdate')" /><br />
+
+    <label>Gender</label><br />
+    <label for="female">Female</label>
+    <input type="radio" id="female" name="gender" value="female" />
+    <label for="male">Male</label>
+    <input type="radio" id="male" name="gender" value="male" /><br />
+
+    <label for="password">Password</label><br />
+    <input required type="password" id="password" name="password" />
+    <br />
+
+    <label for="cpassword">Confirm Password</label><br />
+    <input required type="password" id="cpassword" name="confirm-password" />
+    <span id="errorMessage">Passwords dont match</span>
+    <br />
+
+
+    <label>Skills</label>
+    <ul>
+      <li>
+        <input type="checkbox" id="html" value="html" name="skill" />
+        <label for="html">HTML</label>
+      </li>
+      <li>
+        <input type="checkbox" id="css" value="css" name="skill" />
+        <label for="css">CSS</label>
+      </li>
+      <li>
+        <input type="checkbox" id="js" value="javascript" name="skill" />
+        <label for="js">Javascript</label>
+      </li>
+      <li>
+        <input type="checkbox" id="php" value="php" name="skill" />
+        <label for="php">php</label>
+      </li>
+    </ul>
+
+    <label for="country">Country</label>
+    <select required name="country" id="country">
+      <option value="ethiopia" name="country">Ethiopia</option>
+      <option value="kenya" namee="country">Kenya</option>
+      <option value="somalia" namee="country">Somalia</option>
+      <option value="sudan" namee="country">Sudan</option>
+    </select>
+
+    <br />
+
+    <label or="photo">Photo</label>
+    <input type="file" name="photo" id="photo" /><br />
+
+    <label for="about">Describe Yourself</label><br />
+    <textarea name="about" id="about" cols="40" rows="10"></textarea><br />
+
+    <input type="submit" name="submit" id="submit" />
+    <input type="reset" name="reset" id="reset" onclick="resetForm()" />
+  </form>
+
+  <div id="print"></div>
+
+  <br />
+  <br />
+  <hr />
+  <p>
+    Follow us on: <a href="www.facebook.com">Facebook</a> |
+    <a href="www.twitter.com">Twitter</a>
+  </p>
+</body>
+
+<script>
+  $(document).ready(function () {
+    $("#myForm").submit(function (event) {
+      // Prevent default form submission behavior
+      event.preventDefault();
+      if ($(this).attr("id") === "phone") {
+        if (!value.match(/^\d{10}$/)) {
+          errorElement.text("Invalid phone number");
+        } else {
+          errorElement.text("");
+        }
+      }
+
+      if (!checkPassword()) {
+        return;
+      }
+      document.getElementById("errorMessage").style.display = "none";
+      console.log("hi");
+
+      let table = $("<table></table>");
+
+      let hr = $("<tr></tr>");
+      hr.append("<th>Field</th>");
+      hr.append("<th>Value</th>");
+      table.append(hr);
+
+      $("#myForm")
+        .find("textarea, select, input")
+        .each((index, elem) => {
+          let tr = $("<tr></tr>");
+          if (
+            elem.type === "submit" ||
+            elem.type === "reset" ||
+            (elem.name === "gender" && !elem.checked) ||
+            (elem.name === "skill" && !elem.selected)
+          )
+            return;
+          tr.append(`<td>${elem.name}</td>`);
+          tr.append(`<td>${elem.value ? elem.value : "empty"}</td>`);
+          table.append(tr);
+        });
+
+      // Display the table in the print div
+      $("#print").html(table);
+    });
+  });
+
+  function resetForm() {
+    $("#print").empty();
+  }
+
+  const checkPassword = () => {
+    const pass = document.getElementById("password");
+    const cpass = document.getElementById("cpassword");
+    const errorMessage = document.getElementById("errorMessage");
+    if (pass.value !== cpass.value) {
+      errorMessage.textContent = "passwords dont Match!!";
+      errorMessage.style.display = "inline";
+      return false;
+    }
+    return true;
+  }
+
+  function showError(elementId, errorMessage) {
+    $(`#${elementId}`).addClass(errorMessage);
+    // Optional: Display an error message near the input field
+    // (implement logic to display the error message)
+  }
+
+  function clearError(elementId) {
+    $(`#${elementId}`).removeClass("error");
+    // Optional: Clear any existing error message near the input field
+  }
+
+  function validatePhone(elementId) {
+    const phoneRegex = /^\d{10}$/;
+    const phoneInput = $(`#${elementId}`);
+
+    if (!phoneRegex.test(phoneInput.val())) {
+      showError(elementId, "Invalid phone number format.");
+      isValid = false; // Update the global isValid flag
+    } else {
+      clearError(elementId);
+    }
+  }
+
+  function validateAge(elementId) {
+    const ageInput = $(`#${elementId}`);
+    const ageValue = parseInt(ageInput.val());
+
+    if (isNaN(ageValue) || ageValue < 18 || ageValue > 120) {
+      showError(elementId, "Age must be between 18 and 120.");
+      isValid = false; // Update the global isValid flag
+    } else {
+      clearError(elementId);
+    }
+  }
+
+  function validateBirthdate(elementId) {
+    const birthdateInput = $(`#${elementId}`);
+    const birthdate = new Date(birthdateInput.val());
+
+    // Check if the birthdate is a valid date
+    if (isNaN(birthdate.getTime())) {
+      showError(elementId, "Invalid birthdate format.");
+      isValid = false; // Update the global isValid flag
+      return;
+    }
+
+    // Calculate age based on birthdate
+    const today = new Date();
+    const age = today.getFullYear() - birthdate.getFullYear();
+    const month = today.getMonth() - birthdate.getMonth();
+
+    // Adjust age if birth month is not yet passed in the current year
+    if (month < 0 || (month === 0 && today.getDate() < birthdate.getDate())) {
+      age--;
+    }
+
+    if (age < 18) {
+      showError(elementId, "You must be 18 years or older to register.");
+      isValid = false; // Update the global isValid flag
+    } else {
+      clearError(elementId);
+    }
+  }
+</script>
+
+</html>

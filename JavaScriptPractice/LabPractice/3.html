@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Events Example</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <style>
+    #message {
+      padding: 4px 2px;
+    }
+  </style>
+  <body>
+    <h1>Interactive Events with jQuery</h1>
+    <p id="message">Hover me!</p>
+
+    <a href="#" id="refresh-link">Click to Refresh</a>
+    <a href="https://www.iamawesome.com" id="redirect-link"
+      >Click to Redirect</a
+    >
+  </body>
+  <script>
+    $(document).ready(function () {
+      $("#message").mouseover(function () {
+        $(this).text(
+          "Hovering over the link. Move away to change the message!!!"
+        );
+      });
+
+      $("#message").mouseout(function () {
+        $(this).text(
+          "You have hovered away! Come back sometime later!"
+        );
+      });
+
+      $("#refresh-link").click(function (event) {
+        window.location.reload();
+      });
+      $("#redirect-link").click(function (event) {
+        window.location = $(this).attr("href");
+      });
+    });
+  </script>
+</html>
