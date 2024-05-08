@@ -5,7 +5,7 @@ series 0 1 1 2 3 5 8 13 21 34 will be displayed).
 
 const number = document.getElementById("inputNumber");
 const answer = document.getElementById("answer");
-const button = document.getElementById("FibonachiNumbers");
+const button = document.getElementById("FibonacciNumbers");
 
 const fibonacci = () => {
     if (number.value === "") {
