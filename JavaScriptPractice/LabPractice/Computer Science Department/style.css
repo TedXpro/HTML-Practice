@@ -21,7 +21,7 @@ nav ul{
 }
 nav ul li{
   color: black;
-  background-color: cyan;
+  background-color: rgb(250, 136, 136);
   padding: 0.5em 1em;
   border-radius: 10px;
 }
@@ -32,7 +32,7 @@ input{
 }
 button {
   padding: 0.5rem 1rem;
-  background: greenyellow;
+  background: rgb(116, 15, 171);
   color: black;
   border: none;
   border-radius: 10px;
@@ -48,7 +48,7 @@ main{
   margin-top: 2rem;
 }
 .sidebar1{
-  background-color: lightblue;
+  background-color: lightgray;
   padding: 1rem;
   width: 200px;
   border-radius: 10px;
@@ -59,7 +59,7 @@ main{
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  background-color: white;
+  background-color: lightcoral;
   margin-bottom: 1rem;
   border-radius: 10px;
 }
@@ -68,7 +68,7 @@ main{
 }
 
 .sidebar2{
-  background-color: lightblue;
+  background-color: lightgray;
   padding: 1rem;
   width: 200px;
   border-radius: 10px;
@@ -78,7 +78,7 @@ main{
   display: flex;
   justify-content: left;
   align-items: left;
-  background-color: white;
+  background-color: lightcoral;
   margin-bottom: 1rem;
   border-radius: 10px;
 }
