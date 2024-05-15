@@ -1,0 +1,87 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Twitter Link</title>
+    <style>
+        p {
+            display: inline;
+            align-items: center;
+        }
+
+        #changeButton {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="para">
+        Follow us on Twitter: 
+    </p>
+    <a href="https://twitter.com/" id="twitterLink">Twitter</a>
+    <button id="changeButton">Change Link</button>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            $("#changeButton").click(() => {
+                var newLink = "https://facebook.com";
+                $("#twitterLink").attr("href", newLink).text("FaceBook");
+                $("#para").text("Follow us on Facebook");
+            })
+        })
+
+    </script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Social Link</title>
+    <style>
+p {
+  display: flex;
+  align-items: center;
+}
+
+#changeButton {
+  margin-left: 10px;
+}
+
+    </style>
+</head>
+
+<body>
+    <p>
+        <span id="socialText">Follow us on Twitter: </span>
+        <a href="https://twitter.com/YourTwitterHandle" id="socialLink">YourTwitterHandle</a>
+        <button id="changeButton">Change to Facebook</button>
+    </p>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script >
+        $(document).ready(function () {
+                var isTwitter = true; 
+                $("#changeButton").click(function () {
+                    if (isTwitter) {
+                        $("#socialText").text("Follow us on Facebook: ");
+                        $("#socialLink").attr("href", "https://www.facebook.com/YourFacebookPage").text("YourFacebookPage");
+                        isTwitter = false;
+                    } else {
+                        $("#socialText").text("Follow us on Twitter: ");
+                        $("#socialLink").attr("href", "https://twitter.com/YourTwitterHandle").text("YourTwitterHandle");
+                        isTwitter = true;
+                    }
+                });
+            });
+
+    </script>
+</body>
+
+</html>
