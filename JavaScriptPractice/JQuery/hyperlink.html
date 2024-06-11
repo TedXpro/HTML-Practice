@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify Link with jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+
+<body>
+    <p>This is some content.</p>
+    <a href="https://www.existingwebsite.com" class="myLink">Visit the existing website</a>
+    <script>
+        $(document).ready(function () {
+            $("a.myLink").click(function (event) {
+                // Prevent default link behavior (optional)
+                event.preventDefault();
+
+                // Change the href attribute
+                $(this).attr("href", "https://www.newwebsite.com");  // Replace with your desired URL
+
+                // Change the text content of the link
+                $(this).text("Click here for the new website!");
+            });
+        });
+
+    </script>
+</body>
+
+</html>

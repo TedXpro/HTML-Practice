@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Value from Array</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+
+<body>
+    <p>Original Array: <span id="original-array"></span></p>
+    <p>Value to Remove: <input type="text" id="value-to-remove"></p>
+    <button id="remove-button">Remove Value</button>
+    <p>Modified Array: <span id="modified-array"></span></p>
+    <script>
+        $(document).ready(function () {
+                // Define the original array
+                var myArray = ["apple", "banana", "orange", "cherry", "banana"];
+
+                // Display the original array
+                $("#original-array").text(myArray.join(", "));
+
+                $("#remove-button").click(function () {
+                    // Get the value to remove from the input field
+                    var valueToRemove = $("#value-to-remove").val().trim();
+
+                    // Remove the value from the array using filter
+                    var newArray = myArray.filter(function (value) {
+                        return value !== valueToRemove;
+                    });
+
+                    // Display the modified array
+                    $("#modified-array").text(newArray.join(", "));
+                });
+            });
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css" (optional)>
+</head>
+
+<body>
+    <p>This is some existing content on the page.</p>
+    <div id="content"></div>
+    <script>
+        $(document).ready(function () {
+                // Create a paragraph element with text
+                var newParagraph = $("<p>This is a new paragraph created with jQuery.</p>");
+
+                // Append the paragraph to the body
+                $("body").append(newParagraph);
+            });
+
+    </script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Button Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+
+<body>
+    <p>This is some existing content on the page.</p>
+    <button id="create-paragraph">Create Paragraph</button>
+    <script>
+        $(document).ready(function () {
+                $("#create-paragraph").click(function () {
+                    // Create a paragraph element with text
+                    var newParagraph = $("<p>This is a new paragraph created with jQuery.</p>");
+
+                    // Append the paragraph to the body
+                    $("body").append(newParagraph);
+                });
+            });
+
+    </script>
+</body>
+
+</html>

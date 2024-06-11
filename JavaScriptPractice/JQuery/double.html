@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click and Double-Click Events</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+
+<body>
+    <p id="myParagraph">This paragraph has click and double-click events.</p>
+    <button id="enable-events">Enable Events</button>
+    <script>
+        $(document).ready(function () {
+                var paragraph = $("#myParagraph");
+                var eventsEnabled = false; // Flag to track event attachment state
+
+                $("#enable-events").click(function () {
+                    if (!eventsEnabled) {
+                        // Attach click and double-click events
+                        paragraph.click(function () {
+                            alert("You single clicked the paragraph!");
+                        });
+                        paragraph.dblclick(function () {
+                            alert("You double-clicked the paragraph!");
+                        });
+                        eventsEnabled = true;
+                        $(this).text("Disable Events");
+                    } else {
+                        // Detach click and double-click events
+                        paragraph.off("click dblclick");
+                        eventsEnabled = false;
+                        $(this).text("Enable Events");
+                    }
+                });
+            });
+
+    </script>
+</body>
+
+</html>
