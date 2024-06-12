@@ -8,17 +8,25 @@
             height: 150px;
         }
     </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
-    <h1>What can javascript do?</h1>
-    <p>javascript can change html attribute values</p>
-    <p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
-    <button id="toKoala" type="button">Change to Koala</button>
+    <button id="toKoala" type="button" class="changeBtn">Change to Koala</button>
     <img id="image" src="koala.jpg">
-    <button id="toPenguin" type="button">Change to Penguin</button>
+    <button id="toPenguin" type="button" class="changeBtn">Change to Penguin</button>
 
-    <script src="Script.js"></script>
+    <script >
+        $(document).ready(function() {
+            // $(".changeBtn").click($(this).)
+            $("#toKoala").click(function(){
+                $("#image").attr("src", "koala.jpg");
+            });
+            $("#toPenguin").click(function () {
+                $("#image").attr("src", "penguin.jpg");
+            });
+        });
+    </script>
 </body>
 
 </HTMl>

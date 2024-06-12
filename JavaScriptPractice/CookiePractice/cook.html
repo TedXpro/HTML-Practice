@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie</title>
+</head>
+
+<body>
+    <form action="" name="myform">
+        Enter name: <input type="text" name="customer">
+        <input type="button" value="set cookie" onclick="writeCookie();" />
+    </form>
+
+    <div id="cookieDisplay"></div>
+
+    <script>
+        function writeCookie() {
+            if (document.myform.customer.value == "") {
+                alert("enter some value!");
+                return;
+            }
+            let cookieVal = escape(document.myform.customer.value) + ";";
+            document.cookie = "name=" + cookieVal;
+
+            // Set additional cookies
+            document.cookie = "username=JohnDoe";
+            document.cookie = "sessionToken=abc123; expires=Fri, 31 Dec 2024 23:59:59 GMT; path=/; secure";
+            document.cookie = "theme=light";
+
+            // Log the cookies to the console
+            console.log(document.cookie);
+
+            // Display the cookies on the webpage
+            document.getElementById("cookieDisplay").innerText = "Cookies: " + document.cookie;
+        }
+    </script>
+</body>
+
+</html>

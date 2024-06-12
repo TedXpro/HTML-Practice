@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced $(this) Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #para{
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="para">
+        <p>Hello initial paragraph here!</p>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#para").before(`<h1>Before here!</h1>`);
+            $("#para").prepend(`<a href="https://www.google.com">prepend here</a>`);
+            $("#para").append(`<p>Append here</p>`);
+            $("#para").after(`<h1>After here</h1>`);
+        });
+    </script>
+</body>
+
+</html>
